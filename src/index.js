@@ -5,7 +5,8 @@ import { Editor } from 'react-draft-wysiwyg';
 import draftToHtml from 'draftjs-to-html';
 import '../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import 'draft-js/dist/Draft.css';
-
+import './styles/editor.css'
+import Button from '@material-ui/core/Button';
 
 
 
@@ -15,8 +16,9 @@ const MyEditor = () => {
     );
   
     return (
-    <>
+    <>      
         {/* <Editor editorState={editorState} onChange={setEditorState} />; */}
+        <Button >Save</Button>
         <Editor
           editorState={editorState}
           wrapperClassName="demo-wrapper"
@@ -31,6 +33,7 @@ const MyEditor = () => {
 
 ReactDOM.render(
   <React.StrictMode>
+
       <MyEditor />
   </React.StrictMode>,
   document.getElementById('root')
